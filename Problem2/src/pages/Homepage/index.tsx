@@ -32,8 +32,9 @@ export default function Homepage() {
         if (!active) return
         setPrices(list)
         if (list.length > 0) {
-          setFrom(list[0].currency)
-          setTo(list[1]?.currency || list[0].currency)
+          const randomIndex = Math.floor(Math.random() * list.length)
+          setFrom(list[randomIndex].currency)
+          setTo(list[randomIndex]?.currency || list[0].currency)
         }
       } catch (err: unknown) {
         if (axios.isAxiosError(err)) setError(err.response?.data?.message || err.message || "Request failed")

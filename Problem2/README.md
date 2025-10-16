@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Problem 2 — React + Vite + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**🌐 Demo:** [https://honglam1292.github.io/99tech/](https://honglam1292.github.io/99tech/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Overview
 
-## Expanding the ESLint configuration
+This project is the **Problem2** folder inside the `99tech` repository.  
+It is a small **React + TypeScript + Vite** application that focuses on implementing a clean, maintainable UI using **MUI**, **TailwindCSS**, and **Emotion**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The goal of this project is to demonstrate:
+- Modular component-based UI design.
+- Type-safe implementation with TypeScript.
+- Responsive and consistent layout using MUI and TailwindCSS.
+- Proper build and deployment setup for GitHub Pages.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Tool / Library | Purpose |
+|----------------|----------|
+| **React 19** | Frontend UI framework |
+| **TypeScript** | Type checking and autocompletion |
+| **Vite 6** | Lightning-fast dev server and bundler |
+| **TailwindCSS 3.4** | Utility-first CSS framework |
+| **MUI 7** | Material Design component library |
+| **Emotion** | CSS-in-JS for styling customization |
+| **Axios** | HTTP client for API requests |
+| **Day.js** | Lightweight date utility |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🧩 Project Structure
+
+
+---
+
+## 💡 Implementation Details
+
+- **UI Design:**  
+  The layout and components are implemented using a mix of **MUI** and **TailwindCSS**, providing both flexibility and clean visual hierarchy.
+
+- **Component Logic:**  
+  Each component handles its own state using React’s built-in hooks (`useState`, `useEffect`), focusing on clarity and maintainability.  
+  There is **no external state management** or complex global store — the architecture remains simple and easy to follow.
+
+- **Styling Approach:**  
+  - TailwindCSS handles the general layout and spacing.  
+  - Emotion is used for cases requiring dynamic or conditional styling.  
+  - MUI components ensure accessibility and design consistency.
+
+- **TypeScript Integration:**  
+  Types are defined for component props and function parameters to ensure safe and predictable code behavior.
+
+- **Code Style:**  
+  ESLint and TypeScript are configured to maintain a consistent coding standard and catch potential issues early.
+
+- **Date & Data Handling:**  
+  - `dayjs` is used for date formatting and manipulation.  
+  - `axios` is integrated for handling HTTP requests (ready for API connection).
+
+---
+
+## 🚀 Deployment
+
+This project is deployed via **GitHub Pages** using the `gh-pages` package.
+
+###  Steps
+```bash
+cd Problem2
+yarn install
+yarn dev
