@@ -1,0 +1,15 @@
+function sum_to_n1(n) {
+  let total = 0
+  for (let i = 1; i <= n; i++) {
+    total += i
+  }
+  return total
+}
+
+function sum_to_n2(n) {
+  return (n * (n + 1)) / 2
+}
+
+function sum_to_n3(n) {
+  return Array.from({ length: n }, (_, i) => i + 1).reduce((a, b) => a + b, 0)
+}
